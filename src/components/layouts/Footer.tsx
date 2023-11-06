@@ -25,7 +25,7 @@ export default function Footer() {
             target="_blank"
             underline="none"
             sx={{ color: "text.primary" }}
-            href="https://github.com/crazy-man22"
+            href="https://github.com/4501104141"
           >
             MinhHihi
           </Link>
