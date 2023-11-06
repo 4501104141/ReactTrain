@@ -1,8 +1,10 @@
 import { Box } from "@mui/material";
 import { useLocation, useNavigation } from "react-router-dom";
-import MainHeader from "../components/layouts/MainHeader";
-import MainLoadingScreen from "../components/MainLoadingScreen";
 
+import MainLoadingScreen from "../components/MainLoadingScreen";
+import { MAIN_PATH } from "../constant";
+import { Footer, MainHeader } from "../components/layouts";
+import DetailModalProvider from "../providers/DetailModalProvider";
 export default function MainLayout() {
   const location = useLocation();
   const navigation = useNavigation();
@@ -15,7 +17,11 @@ export default function MainLayout() {
       }}
     >
       <MainHeader />
-      {/* {navigation.state !== "idle" && <MainLoadingScreen />} */}
+      {navigation.state !== "idle" && <MainLoadingScreen />}
+      <DetailModalProvider>
+        
+      </DetailModalProvider>
+      {location.pathname !== `/${MAIN_PATH.watch}` && <Footer />}
     </Box>
   );
 }
