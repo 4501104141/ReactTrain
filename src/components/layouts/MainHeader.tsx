@@ -60,7 +60,6 @@ const MainHeader = () => {
     >
       <Toolbar disableGutters>
         <Logo sx={{ mr: { xs: 2, sm: 4 } }} />
-
         <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
           <IconButton
             size="large"
@@ -129,7 +128,6 @@ const MainHeader = () => {
             </NetflixNavigationLink>
           ))}
         </Stack>
-
         <Box sx={{ flexGrow: 0, display: "flex", gap: 2 }}>
           <SearchBox />
           <Tooltip title="Open settings">
