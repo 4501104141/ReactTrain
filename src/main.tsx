@@ -9,6 +9,8 @@ import palette from "./theme/palette";
 import { RouterProvider } from "react-router-dom";
 import MainLoadingScreen from "./components/MainLoadingScreen";
 import router from "./routes";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 store.dispatch(extendedApi.endpoints.getConfiguration.initiate(undefined));
 const root = ReactDOM.createRoot(
